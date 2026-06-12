@@ -20,6 +20,6 @@ I am also proud to share a few memorable moments from the successful completion 
 
 📸 Project Memories
 
-<img width="1000" height="1000" alt="WhatsApp Image 2026-06-12 at 16 01 27" src="https://github.com/user-attachments/assets/b298bb2f-68e9-46f9-a8c8-5c8686561730" />
-<img width="720" height="720" alt="WhatsApp Image 2026-06-12 at 16 01 27 (1)" src="https://github.com/user-attachments/assets/870bb45c-9295-4218-8599-20caad626500" />
+<img width="1000" height="1250" alt="WhatsApp Image 2026-06-12 at 16 01 27" src="https://github.com/user-attachments/assets/b298bb2f-68e9-46f9-a8c8-5c8686561730" />
+<img width="720" height="1000" alt="WhatsApp Image 2026-06-12 at 16 01 27 (1)" src="https://github.com/user-attachments/assets/870bb45c-9295-4218-8599-20caad626500" />
 
