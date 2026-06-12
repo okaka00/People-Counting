@@ -1,4 +1,4 @@
-<img width="968" height="1200" alt="image" src="https://github.com/user-attachments/assets/9bf11138-3391-4052-9e18-a991059fa6b6" /># People-Counting
+# People-Counting
 
 This Final Year Project presents an autonomous people counting robot that uses YOLOv5 and Jetson Nano to detect and count people in real time. The robot navigates independently while avoiding obstacles, enabling automated monitoring without human intervention. A Gradio dashboard is provided to visualize detection results and people count data.
 
