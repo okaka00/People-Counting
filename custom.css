@@ -1,0 +1,858 @@
+/* =========================================
+   CONTROL TAB ORGANIZATION - ADD TO YOUR CSS FILE
+   ========================================= */
+
+/* Section headers */
+/* =========================================
+   CONTROL TAB ORGANIZATION - ADD TO YOUR CSS FILE
+   ========================================= */
+
+/* Section headers */
+.section-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 15px 20px !important;
+    border-radius: 10px !important;
+    margin: 20px 0 15px 0 !important;
+    text-align: center !important;
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+}
+
+/* Upload section */
+.upload-section {
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 20px !important;
+    border-radius: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Stats grid */
+.stats-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+    margin: 15px 0 !important;
+}
+
+/* Preview container */
+.preview-container {
+    background: rgba(0, 0, 0, 0.3) !important;
+    padding: 15px !important;
+    border-radius: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Control buttons grid */
+.control-grid {
+    display: grid !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    gap: 10px !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+}
+
+/* Status indicators */
+.status-success {
+    color: #43e97b !important;
+    font-weight: bold !important;
+}
+
+.status-warning {
+    color: #ffd93d !important;
+    font-weight: bold !important;
+}
+
+.status-error {
+    color: #ff6b6b !important;
+    font-weight: bold !important;
+}
+
+/* Progress indicator */
+.progress-container {
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    margin: 10px 0 !important;
+}
+
+/* File info box */
+.file-info {
+    background: rgba(33, 150, 243, 0.2) !important;
+    border-left: 4px solid #2196F3 !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    margin: 10px 0 !important;
+}
+
+/* Mode selector */
+.mode-selector {
+    display: flex !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    margin: 20px 0 !important;
+}
+
+/* =========================================
+   FIX FILE UPLOAD WIDTH ISSUE
+   ========================================= */
+/* Force file upload component to maintain consistent width */
+.file-preview {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Prevent file component from expanding */
+input[type="file"] {
+    max-width: 100% !important;
+}
+
+/* Fix uploaded file preview container */
+.upload-container, .file-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Constrain the entire control tab to consistent width */
+#control-tab-container {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Force all Groups and Columns to respect parent width */
+.group, .column {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix specific file upload component width */
+.gr-file {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.gr-file .wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Prevent image preview from expanding beyond container */
+.gr-file img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Fix for file name display */
+.file-name {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+/* =========================================
+   GLOBAL LAYOUT & BACKGROUND (FIXED)
+   ========================================= */
+/* 1. Apply gradient to the entire page canvas, NOT the container */
+body, gradio-app {
+    background: linear-gradient(135deg, #000428 0%, #004e92 100%) !important; /* Deep Space Blue */
+    background-attachment: fixed !important; /* Keeps background static when scrolling */
+    background-size: cover !important;
+    min-height: 100vh !important; /* Forces background to fill 100% of screen height */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Make the center container transparent so the body background shows through */
+.gradio-container {
+    background: transparent !important; 
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    border: none !important;
+}
+
+/* Remove default Gradio white backgrounds */
+.gradio-container > .main, 
+.gradio-container > .main > .wrap { 
+    background: transparent !important; 
+    border: none !important; 
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+h1, h2, h3 {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+p, label, span {
+    color: #e0e6ed !important; 
+}
+
+/* =========================================
+   GLASS PANELS (Containers)
+   ========================================= */
+.group, .form, .box, .tabs, .user-select-none {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2) !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* =========================================
+   START BUTTON (Hero)
+   ========================================= */
+.start-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    padding: 20px 50px !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 50px !important;
+    box-shadow: 0 0 20px rgba(118, 75, 162, 0.5) !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+    margin-top: 30px !important;
+}
+
+.start-button:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 30px rgba(118, 75, 162, 0.8) !important;
+}
+
+/* =========================================
+   NAVIGATION TABS (FIXED FOR YOUR HTML)
+   ========================================= */
+/* 1. Target the container */
+.tab-container {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+    padding-bottom: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important; /* Adds space between buttons */
+}
+
+/* 2. UNSELECTED TABS (White Glass) */
+/* We use button element directly inside the tab-container */
+.tab-container button {
+    /* distinct white glass background */
+    background-color: rgba(255, 255, 255, 0.2) !important; 
+    
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    color: white !important;
+    
+    border-radius: 12px !important;
+    padding: 10px 25px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Hover Effect */
+.tab-container button:hover {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 3. SELECTED TAB (Solid White) */
+/* We target the specific .selected class you found */
+.tab-container button.selected {
+    background-color: white !important;
+    color: #1e3c72 !important; /* Dark Blue text */
+    border: none !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px) !important;
+}
+/* =========================================
+   INPUTS & NUMBERS
+   ========================================= */
+input[type="number"], textarea, .gr-box input {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+}
+
+.block.label {
+    background: transparent !important;
+    color: #a0c4ff !important;
+    text-transform: uppercase !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 5px !important;
+}
+
+/* =========================================
+   BUTTONS (General)
+   ========================================= */
+button {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.2s ease !important;
+    border: none !important;
+}
+
+button.primary {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+button.secondary {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    color: white !important;
+}
+
+button.secondary:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+button.stop {
+    background: linear-gradient(90deg, #ff6b6b 0%, #ee5a6f 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4) !important;
+}
+
+button:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(1.1) !important;
+}
+
+/* =========================================
+   PLOTS & IMAGES
+   ========================================= */
+.plot-container {
+    background: rgba(255,255,255,0.05) !important;
+    border-radius: 15px !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+img.gr-image {
+    border-radius: 15px !important;
+    border: 2px solid rgba(255,255,255,0.2) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.4); }
+
+/* Add this to your custom_css string */
+.history-item {
+    background: rgba(0, 0, 0, 0.25) !important; /* Dark semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Subtle border */
+    border-left: 4px solid #667eea !important; /* Purple accent on the left */
+    border-radius: 10px !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+    color: #e0e6ed !important; /* Light text color */
+}
+
+/* =========================================
+   AIR QUALITY CARD STYLES
+   ========================================= */
+.aq-card {
+    /* The purple/blue gradient background */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    padding: 20px !important;
+    border-radius: 15px !important;
+    color: white !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.aq-title {
+    margin-top: 0 !important;
+    color: white !important;
+    border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+    padding-bottom: 10px !important;
+    font-size: 1.2rem !important;
+}
+
+.aq-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+}
+
+.aq-box {
+    background: rgba(255, 255, 255, 0.2) !important; /* Semi-transparent white */
+    padding: 15px !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(10px) !important;
+    text-align: center !important;
+    transition: transform 0.2s !important;
+}
+
+.aq-box:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Typography helper classes */
+.aq-label { font-size: 12px !important; opacity: 0.9 !important; text-transform: uppercase; letter-spacing: 1px; }
+.aq-val { font-size: 24px !important; font-weight: bold !important; margin: 5px 0 !important; }
+.aq-unit { font-size: 11px !important; opacity: 0.8 !important; }
+
+/* =========================================
+   REPORT GENERATION STYLES
+   ========================================= */
+.report-card {
+    /* Main report container: Dark background instead of white paper */
+    background: rgba(0, 0, 0, 0.6) !important; 
+    backdrop-filter: blur(15px) !important;
+    padding: 40px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5) !important;
+    max-width: 800px !important;
+    margin: 20px auto !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.report-header {
+    text-align: center !important;
+    border-bottom: 3px solid #667eea !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.report-h1 { 
+    color: white !important; 
+    margin: 0 !important; 
+    font-size: 2rem !important; 
+    letter-spacing: 2px !important;
+}
+
+.report-sub { 
+    color: #a0c4ff !important; /* Light blue subtitle */
+    font-size: 14px !important; 
+    margin: 10px 0 0 0 !important; 
+}
+
+.report-section-title {
+    color: #667eea !important;
+    border-left: 4px solid #667eea !important;
+    padding-left: 15px !important;
+    margin: 30px 0 !important;
+    font-size: 1.5rem !important;
+}
+
+/* Table Styles */
+.report-table { 
+    width: 100% !important; 
+    border-collapse: collapse !important; 
+    margin-top: 15px !important; 
+}
+
+.report-table td { 
+    padding: 12px !important; 
+    border: 1px solid rgba(255,255,255,0.1) !important; 
+    color: #e0e6ed !important; 
+}
+
+/* Stripes for table rows (odd rows get slightly lighter bg) */
+.report-table tr:nth-child(odd) { 
+    background: rgba(255, 255, 255, 0.05) !important; 
+}
+
+/* Stat Grid & Colorful Boxes */
+.report-stat-grid { 
+    display: grid !important; 
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 15px !important; 
+    margin-top: 15px !important; 
+}
+
+.stat-card { 
+    padding: 20px !important; 
+    border-radius: 10px !important; 
+    color: white !important; 
+    text-align: center !important; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+}
+
+/* Gradients for the stat boxes */
+.grad-purple { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important; }
+.grad-blue   { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important; }
+.grad-green  { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important; }
+
+.stat-val { font-size: 36px !important; font-weight: bold !important; margin: 10px 0 !important; }
+.stat-label { font-size: 14px !important; opacity: 0.9 !important; }
+
+.report-footer { 
+    margin-top: 40px !important; 
+    padding-top: 20px !important; 
+    border-top: 2px solid rgba(255,255,255,0.1) !important; 
+    text-align: center !important; 
+    color: rgba(255,255,255,0.5) !important; 
+    font-size: 12px !important; 
+}
+
+/* =========================================
+   HISTORY SECTION STYLES
+   ========================================= */
+/* Style for when there is no data */
+.empty-state {
+    text-align: center !important;
+    padding: 50px !important;
+    color: rgba(255, 255, 255, 0.5) !important; /* Dimmed white text */
+    font-style: italic !important;
+}
+
+/* Style for the H2 header inside the card */
+.card-header {
+    color: white !important;
+    margin-top: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important; /* Subtle separator line */
+    padding-bottom: 15px !important;
+    margin-bottom: 20px !important;
+    font-size: 1.5rem !important;
+}
+
+/* =========================================
+   HISTORY ITEM STYLES
+   ========================================= */
+.history-item {
+    /* Dark glass background */
+    background: rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-left: 4px solid #667eea !important; /* Keeps the purple accent */
+    border-radius: 10px !important;
+    padding: 20px !important;
+    margin-bottom: 15px !important;
+    transition: transform 0.2s !important;
+}
+
+.history-item:hover {
+    background: rgba(0, 0, 0, 0.35) !important;
+    transform: translateX(5px) !important; /* Slight animation on hover */
+}
+
+.history-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 15px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    padding-bottom: 10px !important;
+}
+
+.history-title {
+    color: #a0c4ff !important; /* Light blue text to pop against dark bg */
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+.status-badge {
+    background: #667eea !important;
+    color: white !important;
+    padding: 5px 15px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+
+.history-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    color: rgba(255,255,255,0.8) !important; /* Readable light gray text */
+    font-size: 0.95rem !important;
+}
+
+.label-dim {
+    color: rgba(255,255,255,0.5) !important; /* Dimmed labels */
+    margin-right: 5px !important;
+}
+
+/* =========================================
+   START PAGE / HERO STYLES
+   ========================================= */
+.start-container {
+    text-align: center !important;
+    padding: 80px 20px !important;
+}
+
+.hero-title {
+    font-size: 3.5rem !important; /* Large title */
+    font-weight: 800 !important;
+    margin-bottom: 10px !important;
+    color: white !important;
+    /* Optional: Adds a subtle gradient to the text itself */
+    background: linear-gradient(to right, #ffffff, #a0c4ff);
+    background-clip: text;              /* Standard */
+    -webkit-background-clip: text;      /* Chrome, Safari */
+    color: transparent;                 /* Standard fallback */
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem !important;
+    color: rgba(255, 255, 255, 0.7) !important; /* Light text for dark bg */
+    margin-bottom: 50px !important;
+    font-weight: 300 !important;
+}
+
+.intro-card {
+    background: rgba(255, 255, 255, 0.05) !important; /* Very subtle glass */
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important; /* Centers the card */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3) !important;
+}
+
+.intro-text {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important;
+}
+
+/* =========================================
+   INFO BOX STYLES
+   ========================================= */
+.info-box {
+    text-align: center !important;
+    padding: 15px !important;
+    background: rgba(102, 126, 234, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    margin: 20px 0 !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.info-box p {
+    margin: 0 !important;
+    color: white !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+}
+
+.info-box strong {
+    color: #a0c4ff !important;
+    font-weight: bold !important;
+}
+/* =========================================
+   FIX FOR ACTIVE SESSION INPUT (TEXT VISIBILITY)
+   ========================================= */
+/* 1. Target the label text (The words "Active Session") */
+.block label span {
+    color: black !important; /* Light Blue text */
+    font-weight: bold !important;
+    margin-bottom: 5px !important;
+    display: inline-block !important;
+}
+
+/* 2. Target the Input Container/Background */
+.block .input-container, 
+.block label.container {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 3. Target the ACTUAL Text Box (textarea) */
+.block textarea {
+    /* Make background dark so white text shows up */
+    background-color: rgba(0, 0, 0, 0.4) !important; 
+    
+    color: white !important; /* Force text to be white */
+    
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-shadow: none !important; /* Remove shadow for cleaner text */
+}
+
+/* Optional: Disabled state specifically (since Active Session is disabled) */
+.block textarea:disabled {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Slightly darker to show it's disabled */
+    color: rgba(255, 255, 255, 0.9) !important; /* Still bright enough to read */
+    cursor: not-allowed !important;
+    opacity: 1 !important; /* Prevent browser from dimming it too much */
+}
+
+/* =========================================
+   FIX FOR WHITE INPUT BOXES
+   ========================================= */
+/* 1. Force the outer block container to be transparent */
+.block {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 2. Target the specific text input area */
+.block textarea {
+    /* Change background from white to Dark Glass */
+    background-color: rgba(0, 0, 0, 0.3) !important; 
+    
+    /* Make text White so it is visible */
+    color: white !important;
+    
+    /* Add a subtle border */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+}
+
+/* 3. Handle the 'Active Session' label text */
+.block span {
+    color: #a0c4ff !important; /* Light blue text */
+    font-weight: bold !important;
+}
+
+/* 4. Fix specifically for Disabled inputs (like your Session ID box) */
+.block textarea:disabled {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
+}
+/* =========================================
+   FIX FOR PLOT LABELS (Density Heatmap)
+   ========================================= */
+/* Target the label container */
+.block label.float {
+    color: black !important; /* Forces text to be BLACK */
+    font-weight: bold !important;
+    background: white !important;
+}
+
+/* Target the text span inside specifically */
+.block label.float span {
+    color: black !important;
+    text-shadow: none !important; /* Removes any shadow that might make it look blurry */
+}
+
+/* Target the SVG Icon to match the text */
+.block label.float svg {
+    fill: black !important;
+    color: black !important;
+}
+/* =========================================
+   FORCE PLOT LABELS TO BLACK
+   ========================================= */
+/* 1. Target the Label Text */
+.block label {
+    color: #000000 !important; /* Pure Black */
+    --block-label-text-color: #000000;
+    text-shadow: none !important; /* Remove shadow to make it sharp black */
+    font-weight: bold !important;
+}
+
+/* 2. Target the Icon (SVG) next to the text */
+.block label svg {
+    fill: #000000 !important;
+    color: #000000 !important;
+}
+
+/* 3. Target the inner text span */
+.block label span {
+    color: #000000 !important;
+}
+
+/* ========================================= 
+   CONTROL MODE TOGGLE
+========================================= */
+.mode-toggle {
+    display: flex !important;
+    gap: 10px !important;
+    margin: 20px 0 !important;
+}
+
+.mode-btn {
+    flex: 1 !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    font-weight: bold !important;
+    transition: all 0.3s !important;
+    cursor: pointer !important;
+}
+
+.mode-btn-manual {
+    background: rgba(102, 126, 234, 0.3) !important;
+    border: 2px solid #667eea !important;
+    color: white !important;
+}
+
+.mode-btn-manual.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5) !important;
+}
+
+.mode-btn-auto {
+    background: rgba(67, 233, 123, 0.3) !important;
+    border: 2px solid #43e97b !important;
+    color: white !important;
+}
+
+.mode-btn-auto.active {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    box-shadow: 0 0 20px rgba(67, 233, 123, 0.5) !important;
+}
+
+/* ========================================= 
+   KEYBOARD HINT
+========================================= */
+.keyboard-hint {
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    margin: 15px 0 !important;
+    text-align: center !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.keyboard-hint p {
+    margin: 5px 0 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+}
+
+.key-icon {
+    display: inline-block !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    margin: 0 5px !important;
+    font-family: monospace !important;
+    font-weight: bold !important;
+}
+
+.mode-indicator {
+    padding: 10px 20px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    margin: 10px 0 !important;
+}
+
+.mode-manual {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+}
+
+.mode-auto {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    color: white !important;
+}
