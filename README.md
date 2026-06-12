@@ -2,7 +2,7 @@
 
 This Final Year Project presents an autonomous people counting robot that uses YOLOv5 and Jetson Nano to detect and count people in real time. The robot navigates independently while avoiding obstacles, enabling automated monitoring without human intervention. A Gradio dashboard is provided to visualize detection results and people count data.
 
-The project was successfully completed during my final year studies in the previous semester and represents the culmination of the knowledge and skills gained throughout my Software Engineering programme.
+The project was successfully completed during my final year studies in the semester 1 2025/2026 and represents the culmination of the knowledge and skills gained throughout my Software Engineering programme.
 
 
 ## 🎥 Demo Video
